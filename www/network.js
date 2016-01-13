@@ -80,7 +80,7 @@ channel.onCordovaReady.subscribe(function() {
 	        } 
 	        else
 	        {
-	        	if (getLocalParameter){
+	        	if (typeof getLocalParameter !== "undefined"){
 					// quick and ugly correction TODO
 	            	if (me.signalStrength >= ((getLocalParameter(2, 2) === null)? parseInt(getLocalParameter("configUserInterfaceParameters","uip-configWifiThreshold")): parseInt(getLocalParameter(2, 2)))){
 	            		if (timerId !== null) {
